@@ -81,9 +81,8 @@ int isSubsetSum(int set[], int n, int sum, int arr4[],int pos){
 
 int main(){
 	int i, l, property = 0, child, pr, nt, m, k;
-	printf("CSE2003 Data Structures and Algorithms Project: Fair Property Division\nMembers:");
-	printf("\n19BCI0001: Dayeem Parkar\n19BCI0003: Deepak Pandey\n19BCI0036: Akashdeep");
-	printf("\n\nEnter the number of children: ");
+	printf("Fair Property Divider");
+	printf("\n\nEnter the number of people: ");
 	scanf("%d", &k);
 	printf("\nEnter the number of properties: ");
 	scanf("%d", &len);
@@ -97,11 +96,11 @@ int main(){
     // then give each value to different child
     if(k>=len){
 		for(i = 0; i < len; i++){
-            printf("\nProperty given to child %d:\nProperty: %d, Value: %d\n", i + 1, propertyNumber(arr1[i]), arr1[i]);
+            printf("\nProperty given to person %d:\nProperty: %d, Value: %d\n", i + 1, propertyNumber(arr1[i]), arr1[i]);
             printf("Total Value = %d\n",arr1[l]);
         }
         for(i = len; i < k; i++){
-            printf("\nNo property given to child %d:\nValue: 0\n", i + 1);
+            printf("\nNo property given to person %d:\nValue: 0\n", i + 1);
             printf("Total Value = 0\n");
         }
 	}
@@ -120,7 +119,7 @@ int main(){
                 if(nt == 1)
                     arr1[l-1]=arr1[l];
                 else if(pr <= arr1[l]){
-                    printf("\nProperty given to child %d:\nProperty: %d, Value: %d\n", i + 1, propertyNumber(arr1[l]), arr1[l]);
+                    printf("\nProperty given to person %d:\nProperty: %d, Value: %d\n", i + 1, propertyNumber(arr1[l]), arr1[l]);
                     printf("Total Value = %d\n",arr1[l]);
                     childCount++;
                     property = property - arr1[l];
